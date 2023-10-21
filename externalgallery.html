@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>external gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+       
+        <section class="services" id="services">
+        
+    
+        <div class="services-container">
+            <div class="services-box">
+              
+        <a href="myportfolio.html" class="btn">back</a>
+            </div>
+            <div class="container">
+                <form onsubmit="sendemail()">
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="fname">Full Name</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="lname">idea title</label>
+                    </div>
+    
+                    <div class="col-75">
+                      <input type="text" id="lname" name="lastname" placeholder="...">
+                    </div>
+                    <div class="col-25">
+                      <label for="lname">Email</label>
+                    </div>
+    
+                    <div class="col-75">
+                      <input type="text" id="lname" name="lastname" placeholder="..">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="country">participating in</label>
+                    </div>
+                    <div class="col-75">
+                      <select id="country" name="country">
+                        <option value="canada">solutions for the environment </option>
+                        <option value="usa">writing</option>
+                        <option value="usa">robotics</option>
+                        <option value="usa">product idea</option>
+                        <option value="usa">get published</option>
+                        <option value="usa">i want to volunteer</option>
+                        <option value="usa">recycling</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="subject">details about your idea</label>
+                    </div>
+                    <div class="col-75">
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                <br>
+                
+                    <a href="try.html" class="submit" input type="submit" value="Submit">submit</a>
+                  </div>
+                </form>
+              </div>
+           </section>
+              
+          
+      
+         
+        <script src=" https://smtpjs.com/v3/smtp.js"> </script>
+        <script>
+          function sendemail(){
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+          }
+        </script>
+    </body>
+    </html>
+    
+        </section>
+       <section>
+       
